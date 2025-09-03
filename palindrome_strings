@@ -1,0 +1,34 @@
+import java.util.Scanner;// 2 pointer approach palidrome;
+public class palidrome_strings{
+    public static void main(String[]args){
+        System.out.print("Enter the String : ");
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+
+        
+        Boolean ispalindrome = true;
+        int left = 0, right = s.length()-1;
+        
+        while(left<right){
+            if(s.charAt(left) != s.charAt(right)){
+                ispalindrome = false;
+                break;
+            }
+            left++;
+            right--;
+        }
+        
+        if(ispalindrome){
+            System.out.println("is a palindrome" );
+        }
+        else{
+            System.out.println("is not a palindrome");
+        }
+        
+        
+        
+        
+        sc.close();
+        
+    }
+}
